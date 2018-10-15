@@ -80,15 +80,15 @@ public class PropertyUtils {
         String locatorType = values[0];
         String locatorValue = propLocator.substring(propLocator.indexOf("_") + 1);
 
-        if(locatorType.toLowerCase().equals("id"))
+        if(locatorType.equalsIgnoreCase("id"))
             return By.id(locatorValue);
-        else if(locatorType.toLowerCase().equals("name"))
+        else if(locatorType.equalsIgnoreCase("name"))
             return By.name(locatorValue);
-        else if((locatorType.toLowerCase().equals("classname")) || (locatorType.toLowerCase().equals("class")))
+        else if((locatorType.equalsIgnoreCase("classname")) || (locatorType.equalsIgnoreCase("class")))
             return By.className(locatorValue);
-        else if((locatorType.toLowerCase().equals("tagname")) || (locatorType.toLowerCase().equals("tag")))
+        else if((locatorType.equalsIgnoreCase("tagname")) || (locatorType.equalsIgnoreCase("tag")))
             return By.className(locatorValue);
-        else if((locatorType.toLowerCase().equals("linktext")) || (locatorType.toLowerCase().equals("link")))
+        else if((locatorType.equalsIgnoreCase("linktext")) || (locatorType.equalsIgnoreCase("link")))
             return By.linkText(locatorValue);
         else if(locatorType.toLowerCase().equals("partiallinktext"))
             return By.partialLinkText(locatorValue);
