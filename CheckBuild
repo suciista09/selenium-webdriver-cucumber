@@ -7,6 +7,5 @@ node{
     }
     stage('Build'){
         sh 'ls'
-        sh 'pwd'
     }
 }
