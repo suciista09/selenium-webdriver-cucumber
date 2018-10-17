@@ -3,8 +3,10 @@ node{
         stage('check out'){
             checkout scm
         }
-    }
-    stage('Build'){
-        sh 'ls'
-    }
+
+        stage('Build'){
+            sh 'ls'
+        }
+
+
 }
