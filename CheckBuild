@@ -1,6 +1,8 @@
 properties([pipelineTriggers([pollSCM('* * * * *')])])
 node{
-        checkout scm
+        stage('check out'){
+            checkout scm
+        }
     }
     stage('Build'){
         sh 'ls'
