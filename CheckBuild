@@ -1,7 +1,7 @@
 node{
     stage ('checkout'){
         checkout([$class: 'GitSCM',
-            branches: scm.branches,
+            branches: [[name: '*/master']],
             userRemoteConfigs: [[credentialsId: '3f695cc2-cbbc-42be-a6e5-670cca92f2a2', url: 'git@github.com:suciista09/selenium-webdriver-cucumber.git', poll: true]]
         ])
     }
